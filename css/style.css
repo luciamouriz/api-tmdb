@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   color: white;
-  font-family: fontfamily(ruda);
+  font-family: "Ruda";
 }
 
 main {
@@ -86,7 +86,6 @@ main {
 .buscar {
   position: absolute;
   display: none;
-  background-color: black;
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -98,11 +97,18 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
+  padding: 3rem;
   z-index: 105;
+  background-color: #080606;
 }
 .buscar .buscar-videos img {
   width: 130%;
   height: 130%;
+  transition: 0.3s ease all;
+}
+.buscar .buscar-videos img:hover {
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 @media (max-width: 767px) {
@@ -131,7 +137,7 @@ nav .menu {
   gap: 1rem;
 }
 nav .menu .texto {
-  font-family: fontfamily(ruda);
+  font-family: "Ruda";
   font-size: calc(1em + 1vw);
   color: white;
   background: transparent;
@@ -244,7 +250,7 @@ footer {
   position: relative;
 }
 .contenedor-style h2 {
-  font-family: fontfamily(rudaBold);
+  font-family: "Ruda Bold";
   margin-left: 3rem;
   font-size: calc(1em + 1vw);
 }
@@ -299,7 +305,7 @@ footer {
 }
 .top .top-num {
   font-size: calc(4em + 8vw);
-  font-family: fontfamily(ruda);
+  font-family: "Ruda";
   -webkit-text-stroke: 2px white;
   color: transparent;
 }
@@ -338,7 +344,7 @@ footer {
   height: 35vh;
 }
 .contenedor-reparto .reparto .depart {
-  font-family: fontfamily(rudaBold);
+  font-family: "Ruda Bold";
   padding: 1rem;
 }
 
@@ -431,7 +437,7 @@ footer {
 }
 .contenedor-ficha .title-ficha {
   font-size: calc(1em + 3vw);
-  font-family: fontfamily(rudaextraBold);
+  font-family: "Ruda ExtraBold";
 }
 .contenedor-ficha .ficha {
   grid-column: 2/7;
@@ -440,7 +446,7 @@ footer {
   gap: 1rem;
 }
 .contenedor-ficha .ficha #genero {
-  font-family: fontfamily(rudaextraBold);
+  font-family: "Ruda ExtraBold";
   font-size: calc(1em + 1vw);
 }
 
@@ -456,7 +462,7 @@ footer {
   justify-content: center;
 }
 .contenedor-seasons .title-temp {
-  font-family: fontfamily(rudaBold);
+  font-family: "Ruda Bold";
   font-size: 2rem;
 }
 .contenedor-seasons .contenedor-cajas-seasons {

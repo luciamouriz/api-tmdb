@@ -49,7 +49,7 @@
     position: relative;
     
     h2{
-        font-family: fontfamily(rudaBold);
+        font-family: conf.fontfamily(rudaBold);
         margin-left: 3rem;
         font-size: calc(1em + 1vw);
     }
@@ -118,7 +118,7 @@
 
     .top-num{
         font-size: calc(4em + 8vw);
-        font-family: fontfamily(ruda);
+        font-family: conf.fontfamily(ruda);
         -webkit-text-stroke: 2px white;
         color: transparent; 
 
@@ -174,7 +174,7 @@
             height: 35vh;
         }
         .depart{
-            font-family: fontfamily(rudaBold);
+            font-family: conf.fontfamily(rudaBold);
             padding: 1rem;
         }
     }

@@ -24,7 +24,7 @@ nav{
         gap: 1rem;
     
         .texto{
-            font-family: fontfamily(ruda);
+            font-family: conf.fontfamily(ruda);
             font-size: calc(1em + 1vw);
             color: conf.$primary-color;
             background: transparent;
