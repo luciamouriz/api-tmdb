@@ -1,4 +1,4 @@
-@import "config";
+@use "config" as conf;
 
 
 /*Ficha de video*/
@@ -40,9 +40,6 @@
     width: 100%;
     height: 100%;
 }
-
-
-
 
 
 .contenedor-seasons{

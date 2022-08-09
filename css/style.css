@@ -1,4 +1,16 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: fontfamily(ruda);
+}
+
+main {
+  background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
+  background-repeat: no-repeat;
+}
+
 .portada {
   background-repeat: no-repeat;
   background-size: cover;
@@ -93,6 +105,11 @@
   height: 130%;
 }
 
+@media (max-width: 767px) {
+  .flecha-color {
+    width: 10%;
+  }
+}
 header {
   padding: 1rem 0 1rem 0;
   background-color: black;
@@ -114,7 +131,7 @@ nav .menu {
   gap: 1rem;
 }
 nav .menu .texto {
-  font-family: "Ruda";
+  font-family: fontfamily(ruda);
   font-size: calc(1em + 1vw);
   color: white;
   background: transparent;
@@ -227,7 +244,7 @@ footer {
   position: relative;
 }
 .contenedor-style h2 {
-  font-family: "Ruda Bold";
+  font-family: fontfamily(rudaBold);
   margin-left: 3rem;
   font-size: calc(1em + 1vw);
 }
@@ -282,7 +299,7 @@ footer {
 }
 .top .top-num {
   font-size: calc(4em + 8vw);
-  font-family: "Ruda";
+  font-family: fontfamily(ruda);
   -webkit-text-stroke: 2px white;
   color: transparent;
 }
@@ -321,7 +338,7 @@ footer {
   height: 35vh;
 }
 .contenedor-reparto .reparto .depart {
-  font-family: "Ruda Bold";
+  font-family: fontfamily(rudaBold);
   padding: 1rem;
 }
 
@@ -414,7 +431,7 @@ footer {
 }
 .contenedor-ficha .title-ficha {
   font-size: calc(1em + 3vw);
-  font-family: "Ruda ExtraBold";
+  font-family: fontfamily(rudaextraBold);
 }
 .contenedor-ficha .ficha {
   grid-column: 2/7;
@@ -423,7 +440,7 @@ footer {
   gap: 1rem;
 }
 .contenedor-ficha .ficha #genero {
-  font-family: "Ruda ExtraBold";
+  font-family: fontfamily(rudaextraBold);
   font-size: calc(1em + 1vw);
 }
 
@@ -439,7 +456,7 @@ footer {
   justify-content: center;
 }
 .contenedor-seasons .title-temp {
-  font-family: "Ruda Bold";
+  font-family: fontfamily(rudaBold);
   font-size: 2rem;
 }
 .contenedor-seasons .contenedor-cajas-seasons {
@@ -454,22 +471,4 @@ footer {
   padding: 1.5rem;
   margin: 0 3rem 0 3rem;
   cursor: pointer;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-family: "Ruda";
-}
-
-main {
-  background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 767px) {
-  .flecha-color {
-    width: 10%;
-  }
 }

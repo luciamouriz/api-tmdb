@@ -1,4 +1,4 @@
-@import "config";
+@use "config" as conf;
 
 /*Pie de pagina*/
 footer{
@@ -20,7 +20,7 @@ footer{
         margin-bottom: 2rem;
         width: 84vh;
         height: 2px;
-        background-color: $primary-color;
+        background-color: conf.$primary-color;
         
     }
 

@@ -1,4 +1,18 @@
-@import "config";
+@use "config" as conf;
+
+*{
+    margin: 0;
+    padding: 0;
+    color: conf.$primary-color;
+    font-family: fontfamily(ruda);
+}
+
+
+main{
+    background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
+    background-repeat: no-repeat;
+}
+
 
 
 //PORTADA---------------------------------------------------//
@@ -47,7 +61,7 @@
 
         .boton-valorado{
             width: 30%;
-            @include flexbox-row;
+            @include conf.flexbox-row;
             gap: 2rem;
             font-size: calc(1em + 1.3vw);
             //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
@@ -106,7 +120,7 @@
 
     .buscar-videos{
         
-        @include flexbox-row;
+        @include conf.flexbox-row;
         flex-wrap: wrap;
         gap: 5rem;
         z-index: 105;
@@ -119,4 +133,13 @@
 }
 
 
+//Medias mobile 
+@include conf.mobile{
+    
+    .flecha-color{
+        width: 10%;
 
+    }
+    
+    
+}
