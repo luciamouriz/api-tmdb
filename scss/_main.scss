@@ -7,12 +7,15 @@
     font-family: conf.fontfamily(ruda);
 }
 
+html, body {
+    //Para que no salga espacio en blanco a la derecha
+    overflow-x: hidden;
+}
 
 main{
     background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
     background-repeat: no-repeat;
 }
-
 
 
 //PORTADA---------------------------------------------------//
@@ -35,7 +38,7 @@ main{
         gap: 1rem;
         top: 40%;
         left: 5%;
-        width: 50%;
+        width: 100%;
         
 
         .titulo{
@@ -43,6 +46,7 @@ main{
         }
     
         .descripcion{
+            width: 60%;
            // white-space: nowrap;
            // overflow: hidden;
            // text-overflow: ellipsis;
@@ -58,9 +62,9 @@ main{
             height: 6rem;
     
             .boton-valorado{
-                width: 30%;
+                width: 15%;
                 @include conf.flexbox-row;
-                gap: 2rem;
+                justify-content: space-evenly;
                 font-size: calc(1em + 1.3vw);
                 //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
                 background-color: #139fca6b;
@@ -78,7 +82,7 @@ main{
             #play{
     
                 cursor: pointer;
-                width: 40%;
+                width: 20%;
                 font-size: calc(1em + 1.3vw);
                 //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
                 background-color: #139ECA;
@@ -125,6 +129,7 @@ main{
         padding: 3rem;
         z-index: 105;
         background-color: #080606;
+
         img{
             
             width: 130%;
@@ -143,8 +148,6 @@ main{
 
 //Medias mobile 
 @include conf.mobile{
-    
-    .flecha-color{width: 10%;}
     .contenedor-portada{  
         .portada{
             height: 60vw;
@@ -152,7 +155,6 @@ main{
         }
     
         .card{      
-            width: 100%;      
             .titulo{font-size: 4vw;}
             .tipo-video{display: none; }
             .descripcion{display: none;}
@@ -161,19 +163,23 @@ main{
                 gap: 0.5rem;
                 
                 .boton-valorado{
-                    width: 30%;
-                    gap: 0.5rem;
+                    
+                    width: 25%;
+                    border-radius: 0.2rem;
                     #valorado{font-size: 5vw;}
                     .star{margin-bottom:0.4rem; font-size: 10vw;}
                 }
     
                 #play{
+                    border-radius: 0.2rem;
                     width: 30%;
                     font-size: 4vw;
                 }
             }
         }
     
-        
     }
+
+    .carousel-size { padding: 1.5rem 0 1.5rem 0;}
+    .visto{span{height: 5px;}}
 }

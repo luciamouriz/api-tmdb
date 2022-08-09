@@ -6,13 +6,14 @@
 
 /*Carruseles de todas las paginas*/
 .flecha-color{
+    
     position: absolute;
     border: none;
     font-size: 3rem;
-    height: 70%;
+    width: calc(0.7em + 2vw);
+    height: calc(3em + 11vw);
     top: calc(50% - 30%);
     line-height: 3rem;
-    width: 5%;
     color: conf.$primary-color;
     cursor: pointer;
     opacity: 1;
@@ -23,6 +24,7 @@
 
 .flecha-izquierda {
     left: 0;
+    font-size: calc(2em + 1vw);
     @include conf.linear90;
     &:hover {
         background: linear-gradient(90deg, rgba(8, 6, 6, 0.57) 8.93%, rgba(0, 0, 0, 0.291118) 71.87%, rgba(0, 0, 0, 0) 108.65%);
@@ -35,6 +37,7 @@
 
 .flecha-derecha {
     right: 0;
+    font-size: calc(2em + 1vw);
     @include conf.linear270;
     &:hover {
         background: linear-gradient(270deg, rgba(8, 6, 6, 0.57) 8.93%, rgba(0, 0, 0, 0.291118) 71.87%, rgba(0, 0, 0, 0) 108.65%);
@@ -51,7 +54,7 @@
     h2{
         font-family: conf.fontfamily(rudaBold);
         margin-left: 3rem;
-        font-size: calc(0.5em + 1.5vw);
+        font-size: calc(0.6em + 1.5vw);
     }
 }
 
@@ -70,14 +73,13 @@
         gap: 2rem;
         margin-left: 4rem;
         
-        .top, .popular, .pelicula, .serie, .visto{
+        .popular, .pelicula, .serie, .visto{
             transition: .3s ease all;
             box-shadow: 5px 5px 10px rgba(0,0,0, .3);
           
             img{
-                max-width: 45vw;
-                min-width: 25vh;
-                height: 40vh;
+                width: calc(3em + 11vw);
+                height: calc(5em + 15vw);
             }
 
             &:hover{
@@ -97,22 +99,31 @@
 
 .top {
     
-    height: 45vh;
+    height: calc(7em + 13vw);
     padding: 0 2rem 0 2rem;
     background: linear-gradient(0deg, rgba(19, 158, 202, 0.73) 0%, rgba(19, 158, 202, 0.54) 24.28%, rgba(19, 158, 202, 0.33) 58.64%, rgba(19, 158, 202, 0) 113.72%);
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-
+    
     .num-video{
         @include conf.flexbox-row;
         margin-top: 1rem;
         margin-bottom: 1rem;
         gap: 2rem;
-
+        transition: .3s ease all;
+      
         img{
+            width: calc(3em + 11vw);
+            height: calc(5em + 13vw);
             border-radius: 1rem;
             box-shadow: 5px 5px 10px rgba(0,0,0, .3);
         }
+
+        &:hover{
+            transform: scale(1.2);
+            transform-origin: center;
+        }
+        
 
     }
 
@@ -223,6 +234,7 @@
 .show{
     display: none;
 }
+
 .visto{
     position: relative;
 
