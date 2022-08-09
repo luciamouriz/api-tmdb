@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/stylefonts.css">
+    <title>Zine</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img class="logo" src="img/logo.png" alt="logo Zine"></a>
+            <div class="menu">
+                <div><input type="text" name="texto" class="texto" id="texto" placeholder="BUSCAR" onkeyup="searchVideos()"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="buscar" class="buscar">
+            <div id="buscar-videos" class="buscar-videos"></div>
+        </div>
+       <!-- <iframe id="trailer" width="100%" height="715" src='' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+       <div class="contenedor-portada">
+            <div class="card">
+                <p class="tipo-video"></p>
+                <p class="titulo"></p>
+                <p class="descripcion"></p>
+                <div class="botones">
+                    <button id="play" onclick="data()">&#128898; Reproducir</button>
+                    <div class="boton-valorado">
+                        <div id="star" class="star">&#9733;</div>
+                        <div id="valorado"></div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="degradado"></div>
+            <div class="portada"></div>
+        </div>      
+       
+        <div class="contenedor-vistas contenedor-style show">
+            <h2>Vistas recientemente</h2>
+            <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+            <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+            <div class="contenedor-carousel-vistas carousel-size">
+                <div id="carousel-vistas" class="carousel-vistas carousel-flex"></div>
+            </div>
+        </div>
+
+        <div class="contenedor-populares contenedor-style">
+            <h2>Popular en Zine</h2>
+            <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+            <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+            <div class="contenedor-carousel-populares carousel-size">
+                <div id="carousel-popular" class="carousel-popular carousel-flex"></div>
+            </div>
+        </div>
+        
+        <div class="contenedor-tendencias contenedor-style">
+            <h2>Top 10</h2>
+            <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+            <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+            <div class="contenedor-carousel-tendencias carousel-size">
+                <div id="carousel-tendencia" class="carousel-tendencia carousel-flex"></div>
+            </div>
+        </div>
+
+        <div class="contenedor-peliculas-populares contenedor-style">
+            <h2>Peliculas populares</h2>
+            <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+            <button role="button" class="flecha-derecha flecha-color" >&#10095;</button>
+            <div class="contenedor-carousel-peliculas carousel-size">
+                <div id="carousel-peliculas-populares" class="carousel-peliculas-populares carousel-flex"></div>
+            </div>
+        </div>
+
+        <div class="contenedor-series-populares contenedor-style">
+            <h2>Series Populares</h2>
+            <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+            <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+            <div class="contenedor-carousel-series carousel-size">
+                <div id="carousel-series-populares" class="carousel-series-populares carousel-flex"></div>
+            </div>
+        </div>
+
+        <div class="contenedor-recomendaciones contenedor-style">
+            <h2>Recomendaciones Zine</h2>
+            <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+            <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+            <div class="contenedor-carousel-recomendaciones carousel-size">
+                <div id="carousel-recomendaciones" class="carousel-recomendaciones carousel-flex"></div>
+            </div>
+        </div>
+	</main>
+    <footer>
+        <div class="info-footer">
+            <div class="rrss-footer">
+                <h2>Siguenos</h2>
+                <img  src="./img/redesSociales.png">
+            </div>
+            <div class="conocenos">
+                <h2>Conocenos</h2>
+                <p><a href="#">Trabaja con nosotros</a></p>
+                <p><a href="#">Contactanos</a></p>
+            </div>
+            <div class="condiciones">
+                <h2>Condiciones</h2>
+                <p><a href="#">Privacidad</a></p>
+                <p><a href="#">Términos de uso</a></p>
+                <p><a href="#">Avisos legales</a></p>
+            </div>
+            <div class="ayuda">
+                <h2>¿Necesitas ayuda?</h2>
+                <p><a href="#">Cuenta</a></p>
+                <p><a href="#">Centro de ayuda</a></p>
+                <p><a href="#">Canjea Tarjeta Regalo</a></p>
+                <p><a href="#">Preguntas frecuentes</a></p>
+            </div>
+        </div>
+        <div class="lineas">
+            <span></span>
+            <img class="logo-footer" src="./img/ZINE.png" alt="Logo Zine">
+            <span></span>
+            <p class="copy">Copyright &copy; 2022 Zine - Todos los derechos reservados. Número de registro: 000000-000.</p>
+        </div>
+    </footer>
+    <script src="./js/script-home.js"></script>
+    <script src="./js/eventos.js"></script>
+</body>
+</html>

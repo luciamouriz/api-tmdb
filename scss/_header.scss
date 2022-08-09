@@ -1,0 +1,40 @@
+@forward "config";
+
+header{
+    padding: 1rem 0 1rem 0;
+    background-color: black;
+}
+
+
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3em 0 3em;
+    
+    .logo{
+        width: 60%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    
+        .texto{
+            font-family: fontfamily(ruda);
+            font-size: calc(1em + 1vw);
+            color: $primary-color;
+            background: transparent;
+            width: 100%;
+            border: 0;
+            border-bottom: 1px white solid;
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
+}
+

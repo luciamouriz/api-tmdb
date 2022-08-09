@@ -1,0 +1,30 @@
+@import "main";
+@import "header";
+@import "footer";
+@import "config";
+@import "carrouseles";
+@import "ficha";
+
+*{
+    margin: 0;
+    padding: 0;
+    color: $primary-color;
+    font-family: fontfamily(ruda);
+}
+
+
+main{
+    background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
+    background-repeat: no-repeat;
+}
+
+//Medias mobile 
+@include mobile{
+    
+    .flecha-color{
+        width: 10%;
+
+    }
+    
+    
+}

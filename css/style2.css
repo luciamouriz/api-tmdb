@@ -1,0 +1,75 @@
+*{
+    margin:0px;
+    padding: 0px;
+    color:white;
+    font-family:"Ruda";
+   
+}
+body{
+    background-color: black;
+}
+header{
+    padding-bottom: 20px;
+}
+#poster p {
+    display: inline;
+}
+#trailer{
+    width: 100%;
+}
+
+.logo{
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+nav{
+    font-size: 1.5vw;
+
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    gap:25em;
+}
+
+.menu div{
+    margin-right: 43px;
+    display: inline;
+}
+
+.portada{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vw;
+}
+
+
+.contenedor-portada{
+    position: relative;
+}
+
+.card{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    top:40%;
+    left:5%;
+    width: 50%;
+}
+
+.botones button{
+    width: 8em;
+    font-size: 2.5vw;
+    background-color: #139ECA;
+    border:0px;
+    padding:20px;
+    margin-right: 50px;
+}
+
+.titulo{
+    font-size: 4vw;
+}
+

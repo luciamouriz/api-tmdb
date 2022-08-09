@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Gill Sans Ultra Bold Condensed';
+    
+    src: local('Gill Sans Ultra Bold Condensed'),
+         url('./Gill Sans/GILSANUB.TTF') ;
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Ruda';
+    
+    src: local('Ruda'),
+         url('./Ruda/Ruda-Regular.ttf') ;
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ruda Bold';
+    
+    src: local('Ruda Bold'),
+         url('./Ruda/Ruda-Bold.ttf') ;
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ruda ExtraBold';
+    
+    src: local('Ruda ExtraBold'),
+         url('./Ruda/Ruda-ExtraBold.ttf') ;
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

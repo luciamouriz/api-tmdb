@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/stylefonts.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img class="logo" src="img/logo.png" alt="logo Zine"></a>
+            <div class="menu">
+                <div><input type="text" name="texto" class="texto" id="texto" placeholder="BUSCAR" onkeyup="searchVideos()"></div> 
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="buscar" class="buscar">
+            <div id="buscar-videos" class="buscar-videos"></div>
+        </div>
+        <div class="contenedor-ficha">
+            <p class="back-arrow"><a onclick="window.history.go(-1)" href="#">&#129092;</a></p>
+            <div class="ficha">
+                <div id="media"></div>
+                <p id="title-ficha" class="title-ficha"></p>
+                <p id="genero"></p>
+                <p id="info"></p>
+                <hr>
+                <p id="sinopsis"></p>
+                <hr>
+                <div id="contenedor-reparto" class="contenedor-reparto contenedor-style">
+                    <h2>Reparto principal</h2>
+                    <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+                    <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+                    <div class="contenedor-carousel-reparto carousel-size">
+                        <div id="carousel-reparto" class="carousel-reparto carousel-flex"></div>
+                    </div>
+                </div>
+
+                
+                <div id="contenedor-seasons" class="contenedor-seasons">
+                    <div id="contenedor-cajas-seasons" class="contenedor-cajas-seasons"></div>
+                </div>
+                <div id="contenedor-episodes" class="contenedor-episodes contenedor-style">
+                    <p id="title-season-2"></p>
+                    <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+                    <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+                    <div class="contenedor-carousel-episodes carousel-size">
+                        <div id="carousel-episodes" class="carousel-episodes carousel-flex"></div>
+                    </div>
+                </div>
+
+
+                <div class="contenedor-similar contenedor-style">
+                    <h2>Similar a lo que estas viendo</h2>
+                    <button role="button" class="flecha-izquierda flecha-color">&#10094;</button>
+                    <button role="button" class="flecha-derecha flecha-color">&#10095;</button>
+                    <div class="contenedor-carousel-similar carousel-size">
+                        <div id="carousel-similar" class="carousel-similar carousel-flex"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="info-footer">
+            <div class="rrss-footer">
+                <h2>Siguenos</h2>
+                <img src="./img/redesSociales.png" alt="Redes sociales">
+            </div>
+            <div class="conocenos">
+                <h2>Conocenos</h2>
+                <p><a href="#">Trabaja con nosotros</a></p>
+                <p><a href="#">Contactanos</a></p>
+            </div>
+            <div class="condiciones">
+                <h2>Condiciones</h2>
+                <p><a href="#">Privacidad</a></p>
+                <p><a href="#">Términos de uso</a></p>
+                <p><a href="#">Avisos legales</a></p>
+            </div>
+            <div class="ayuda">
+                <h2>¿Necesitas ayuda?</h2>
+                <p><a href="#">Cuenta</a></p>
+                <p><a href="#">Centro de ayuda</a></p>
+                <p><a href="#">Canjea Tarjeta Regalo</a></p>
+                <p><a href="#">Preguntas frecuentes</a></p>
+            </div>
+        </div>
+        <div class="lineas">
+            <span></span>
+            <img class="logo-footer" src="./img/ZINE.png" alt="Logo Zine">
+            <span></span>
+            <p class="copy">Copyright &copy; 2022 Zine - Todos los derechos reservados. Número de registro: 000000-000.</p>
+        </div>
+    </footer>
+    <script src="./js/eventos.js"></script>
+    <script src="./js/script-ficha.js"></script>
+    
+</body>
+</html>

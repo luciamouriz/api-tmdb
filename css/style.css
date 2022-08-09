@@ -1,0 +1,475 @@
+@charset "UTF-8";
+.portada {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vw;
+  margin-bottom: 5em;
+}
+
+.contenedor-portada {
+  position: relative;
+}
+.contenedor-portada .card {
+  position: absolute;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  top: 40%;
+  left: 5%;
+  width: 50%;
+}
+.contenedor-portada .card .titulo {
+  font-size: calc(1em + 1.4vw);
+}
+.contenedor-portada .card .descripcion {
+  font-size: calc(1em + 0.1vw);
+}
+.contenedor-portada .botones {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 6rem;
+}
+.contenedor-portada .botones .boton-valorado {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: calc(1em + 1.3vw);
+  background-color: rgba(19, 159, 202, 0.4196078431);
+  border: 0;
+  border-radius: 0.5rem;
+}
+.contenedor-portada .botones .boton-valorado .star {
+  font-size: calc(1em + 2.5vw);
+  margin-bottom: 1rem;
+  color: #16CA13;
+}
+.contenedor-portada .botones button {
+  cursor: pointer;
+  width: 40%;
+  font-size: calc(1em + 1.3vw);
+  background-color: #139ECA;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.contenedor-portada .botones button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.contenedor-portada .botones button:active {
+  background-color: #139ECA;
+}
+.contenedor-portada .degradado {
+  position: absolute;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3909067533) 20%, rgba(0, 0, 0, 0.2732596945) 29%, rgba(0, 0, 0, 0) 56%, rgba(0, 0, 0, 0.3152765012) 81%, rgb(0, 0, 0) 100%);
+  width: 100%;
+  height: 100%;
+}
+
+/*Buscar Peliculas o series*/
+.buscar {
+  position: absolute;
+  display: none;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.buscar .buscar-videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  z-index: 105;
+}
+.buscar .buscar-videos img {
+  width: 130%;
+  height: 130%;
+}
+
+header {
+  padding: 1rem 0 1rem 0;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3em 0 3em;
+}
+nav .logo {
+  width: 60%;
+}
+nav .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+nav .menu .texto {
+  font-family: "Ruda";
+  font-size: calc(1em + 1vw);
+  color: white;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px white solid;
+}
+nav .menu .texto:focus {
+  outline: 0;
+}
+
+/*Pie de pagina*/
+footer {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background: linear-gradient(180deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
+}
+
+.lineas {
+  text-align: center;
+  margin-top: 15rem;
+}
+.lineas span {
+  display: inline-flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 84vh;
+  height: 2px;
+  background-color: white;
+}
+.lineas .logo-footer {
+  max-width: 10vw;
+  min-width: 18vh;
+  height: 8vh;
+}
+.lineas .copy {
+  margin-top: 2rem;
+}
+
+.info-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 8rem;
+}
+.info-footer .conocenos, .info-footer .ayuda, .info-footer .condiciones {
+  font-size: calc(1em + 0.2vw);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.info-footer .conocenos a, .info-footer .ayuda a, .info-footer .condiciones a {
+  text-decoration: none;
+}
+.info-footer .rrss-footer {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.info-footer .rrss-footer img {
+  max-width: 40vw;
+  min-width: 29vh;
+  height: 12vh;
+}
+
+/*Carruseles de todas las paginas*/
+.flecha-color {
+  position: absolute;
+  border: none;
+  font-size: 3rem;
+  height: 70%;
+  top: 20%;
+  line-height: 3rem;
+  width: 5%;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 80;
+  transition: 0.2s ease all;
+}
+
+.flecha-izquierda {
+  left: 0;
+  background: linear-gradient(90deg, rgba(19, 158, 202, 0.57) 8.93%, rgba(19, 158, 202, 0.291118) 71.87%, rgba(19, 158, 202, 0) 108.65%);
+}
+.flecha-izquierda:hover {
+  background: linear-gradient(90deg, rgba(8, 6, 6, 0.57) 8.93%, rgba(0, 0, 0, 0.291118) 71.87%, rgba(0, 0, 0, 0) 108.65%);
+}
+.flecha-izquierda:active {
+  background: linear-gradient(90deg, rgba(19, 158, 202, 0.57) 8.93%, rgba(19, 158, 202, 0.291118) 71.87%, rgba(19, 158, 202, 0) 108.65%);
+}
+
+.flecha-derecha {
+  right: 0;
+  background: linear-gradient(270deg, rgba(19, 158, 202, 0.57) 8.93%, rgba(19, 158, 202, 0.291118) 71.87%, rgba(19, 158, 202, 0) 108.65%);
+}
+.flecha-derecha:hover {
+  background: linear-gradient(270deg, rgba(8, 6, 6, 0.57) 8.93%, rgba(0, 0, 0, 0.291118) 71.87%, rgba(0, 0, 0, 0) 108.65%);
+}
+.flecha-derecha:active {
+  background: linear-gradient(270deg, rgba(19, 158, 202, 0.57) 8.93%, rgba(19, 158, 202, 0.291118) 71.87%, rgba(19, 158, 202, 0) 108.65%);
+}
+
+.contenedor-style {
+  position: relative;
+}
+.contenedor-style h2 {
+  font-family: "Ruda Bold";
+  margin-left: 3rem;
+  font-size: calc(1em + 1vw);
+}
+
+.carousel-size {
+  width: 96.5%;
+  padding: 3rem 0 3rem 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.carousel-size .carousel-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-left: 4rem;
+}
+.carousel-size .carousel-flex .top, .carousel-size .carousel-flex .popular, .carousel-size .carousel-flex .pelicula, .carousel-size .carousel-flex .serie, .carousel-size .carousel-flex .visto {
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.carousel-size .carousel-flex .top img, .carousel-size .carousel-flex .popular img, .carousel-size .carousel-flex .pelicula img, .carousel-size .carousel-flex .serie img, .carousel-size .carousel-flex .visto img {
+  max-width: 45vw;
+  min-width: 25vh;
+  height: 40vh;
+}
+.carousel-size .carousel-flex .top:hover, .carousel-size .carousel-flex .popular:hover, .carousel-size .carousel-flex .pelicula:hover, .carousel-size .carousel-flex .serie:hover, .carousel-size .carousel-flex .visto:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.top {
+  height: 45vh;
+  padding: 0 2rem 0 2rem;
+  background: linear-gradient(0deg, rgba(19, 158, 202, 0.73) 0%, rgba(19, 158, 202, 0.54) 24.28%, rgba(19, 158, 202, 0.33) 58.64%, rgba(19, 158, 202, 0) 113.72%);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.top .num-video {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+.top .num-video img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.top .top-num {
+  font-size: calc(4em + 8vw);
+  font-family: "Ruda";
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.contenedor-recomendaciones .flecha-izquierda, .contenedor-recomendaciones .flecha-derecha {
+  top: 20%;
+}
+.contenedor-recomendaciones .contenedor-carousel-recomendaciones {
+  width: 95%;
+  height: 70%;
+}
+.contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion {
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion img {
+  max-width: 45vw;
+  min-width: 45vh;
+  height: 75vh;
+}
+.contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.contenedor-reparto h2 {
+  margin-left: 0;
+}
+.contenedor-reparto .reparto {
+  font-size: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contenedor-reparto .reparto img {
+  max-width: 45vw;
+  min-width: 15vh;
+  height: 35vh;
+}
+.contenedor-reparto .reparto .depart {
+  font-family: "Ruda Bold";
+  padding: 1rem;
+}
+
+.contenedor-similar {
+  margin-top: 18rem;
+}
+.contenedor-similar h2 {
+  margin-left: 0;
+}
+.contenedor-similar .similar {
+  position: relative;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contenedor-similar .similar .title-similar {
+  position: absolute;
+  font-size: 2rem;
+  top: 70%;
+  left: 4%;
+  width: 96%;
+  background-color: rgba(19, 159, 202, 0.4823529412);
+}
+.contenedor-similar .similar img {
+  max-width: 45vw;
+  min-width: 60vh;
+  height: 40vh;
+}
+.contenedor-similar .similar:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.show {
+  display: none;
+}
+
+.visto {
+  position: relative;
+}
+.visto span {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #139ECA 2.73%, rgba(19, 158, 202, 0.520833) 47.77%, rgba(19, 158, 202, 0) 71.27%);
+}
+
+.contenedor-episodes {
+  display: none;
+  margin-bottom: 3rem;
+}
+.contenedor-episodes .flecha-color {
+  height: 75%;
+  top: 12%;
+}
+.contenedor-episodes .episode {
+  position: relative;
+  margin-bottom: 6rem;
+}
+.contenedor-episodes .episode img {
+  width: 23vw;
+  height: 30vh;
+}
+.contenedor-episodes .episode .title-episode {
+  font-size: 1.5rem;
+}
+.contenedor-episodes .episode .descripcion-episodio {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  top: 104%;
+  font-size: 0.9rem;
+}
+
+/*Ficha de video*/
+.contenedor-ficha {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  padding-top: 3rem;
+}
+.contenedor-ficha .back-arrow {
+  font-size: calc(1em + 4vw);
+  grid-column: 1/2;
+  text-align: center;
+}
+.contenedor-ficha .back-arrow a {
+  text-decoration: none;
+}
+.contenedor-ficha .title-ficha {
+  font-size: calc(1em + 3vw);
+  font-family: "Ruda ExtraBold";
+}
+.contenedor-ficha .ficha {
+  grid-column: 2/7;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contenedor-ficha .ficha #genero {
+  font-family: "Ruda ExtraBold";
+  font-size: calc(1em + 1vw);
+}
+
+/*Lo añadimos mediante javascript*/
+.proximamente {
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor-seasons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedor-seasons .title-temp {
+  font-family: "Ruda Bold";
+  font-size: 2rem;
+}
+.contenedor-seasons .contenedor-cajas-seasons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contenedor-seasons .contenedor-cajas-seasons .season {
+  background: linear-gradient(180deg, #139ECA 0%, rgba(32, 152, 189, 0.489583) 99.99%, rgba(45, 145, 176, 0) 100%);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 0 3rem 0 3rem;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Ruda";
+}
+
+main {
+  background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .flecha-color {
+    width: 10%;
+  }
+}

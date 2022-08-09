@@ -1,0 +1,273 @@
+@forward "config";
+
+/////////////////////////////////////////////
+///CONTENEDORES GENERALES///
+/////////////////////////////////////////////
+
+/*Carruseles de todas las paginas*/
+.flecha-color{
+    position: absolute;
+    border: none;
+    font-size: 3rem;
+    height: 70%;
+    top: calc(50% - 30%);
+    line-height: 3rem;
+    width: 5%;
+    color: $primary-color;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 80;
+    transition: .2s ease all;
+    
+}
+
+.flecha-izquierda {
+    left: 0;
+    @include linear90;
+    &:hover {
+        background: linear-gradient(90deg, rgba(8, 6, 6, 0.57) 8.93%, rgba(0, 0, 0, 0.291118) 71.87%, rgba(0, 0, 0, 0) 108.65%);
+    }
+
+    &:active {
+        @include linear90;
+    }
+}
+
+.flecha-derecha {
+    right: 0;
+    @include linear270;
+    &:hover {
+        background: linear-gradient(270deg, rgba(8, 6, 6, 0.57) 8.93%, rgba(0, 0, 0, 0.291118) 71.87%, rgba(0, 0, 0, 0) 108.65%);
+    }
+
+    &:active {
+        @include linear270;
+    }
+}
+
+.contenedor-style{  
+    position: relative;
+    
+    h2{
+        font-family: fontfamily(rudaBold);
+        margin-left: 3rem;
+        font-size: calc(1em + 1vw);
+    }
+}
+
+.carousel-size {
+    
+    width: 96.5%;
+    padding: 3rem 0 3rem 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+    .carousel-flex{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-left: 4rem;
+        
+        .top, .popular, .pelicula, .serie, .visto{
+            transition: .3s ease all;
+            box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+          
+            img{
+                max-width: 45vw;
+                min-width: 25vh;
+                height: 40vh;
+            }
+
+            &:hover{
+                transform: scale(1.2);
+                transform-origin: center;
+            }
+        }
+        
+    }
+}
+
+/////////////////////////////////////////////
+///CAMBIOS DE CONTENEDORES INDEPENDIENTES///
+/////////////////////////////////////////////
+
+//CONTENEDOR TENDENCIAS
+
+.top {
+    
+    height: 45vh;
+    padding: 0 2rem 0 2rem;
+    background: linear-gradient(0deg, rgba(19, 158, 202, 0.73) 0%, rgba(19, 158, 202, 0.54) 24.28%, rgba(19, 158, 202, 0.33) 58.64%, rgba(19, 158, 202, 0) 113.72%);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+
+    .num-video{
+        @include flexbox-row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        gap: 2rem;
+
+        img{
+        
+            
+            border-radius: 1rem;
+            box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+        }
+
+    }
+
+    .top-num{
+        font-size: calc(4em + 8vw);
+        font-family: fontfamily(ruda);
+        -webkit-text-stroke: 2px white;
+        color: transparent; 
+
+    }
+}
+
+//CONTENEDOR RECOMENDACIONES 
+
+.contenedor-recomendaciones{
+    .flecha-izquierda, .flecha-derecha {
+        top: 20%;
+    }
+
+    .contenedor-carousel-recomendaciones{
+        width: 95%;
+        height: 70%;
+        
+        .recomendacion{
+            transition: .3s ease all;
+            box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+          
+            img{
+                max-width: 45vw;
+                min-width: 45vh;
+                height: 75vh;
+           }
+        
+            &:hover{
+                transform: scale(1.2);
+                transform-origin: center;
+            }
+           
+        }
+        
+    }
+}
+
+
+
+//CONTENEDOR REPARTO
+
+.contenedor-reparto{  
+    h2{
+        margin-left:  0;
+    }
+
+    .reparto{
+        font-size: 1rem;
+        box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+        img{
+            max-width: 45vw;
+            min-width: 15vh;
+            height: 35vh;
+        }
+        .depart{
+            font-family: fontfamily(rudaBold);
+            padding: 1rem;
+        }
+    }
+    
+}
+
+//CONTENEDOR SIMILARES
+
+.contenedor-similar{
+    margin-top: 18rem;
+
+    h2{
+        margin-left:0;
+    }
+
+    .similar{
+        position: relative;
+        transition: .3s ease all;
+        box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+
+        .title-similar{
+            position: absolute;
+            font-size: 2rem;
+            top: 70%;
+            left: 4%;
+            width: 96%;
+            background-color: #139fca7b;
+        }
+        
+        img{
+            max-width: 45vw;
+            min-width: 60vh;
+            height: 40vh;
+        }
+
+        &:hover{
+            transform: scale(1.2);
+            transform-origin: center;
+        }
+    }
+    
+}
+
+//CONTENEDOR VISTAS
+
+.show{
+    display: none;
+}
+.visto{
+    position: relative;
+
+    span{
+        position: absolute;
+        top: 90%;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(90deg, #139ECA 2.73%, rgba(19, 158, 202, 0.520833) 47.77%, rgba(19, 158,202, 0) 71.27%);
+        
+    }
+}
+
+//CONTENEDOR EPISODIOS
+
+.contenedor-episodes{
+    display: none;
+    margin-bottom: 3rem;
+
+    .flecha-color{
+        height: 75%;
+        top:12%
+    }
+    .episode{
+        position: relative;
+        margin-bottom: 6rem;
+
+        img{
+            width: 23vw;
+            height: 30vh;
+        }
+
+        .title-episode{
+            font-size: 1.5rem;
+        }
+
+        .descripcion-episodio{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            top: 104%;
+            font-size: 0.9rem;
+        }
+    }
+}

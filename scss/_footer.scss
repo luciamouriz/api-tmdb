@@ -1,0 +1,79 @@
+@import "config";
+
+/*Pie de pagina*/
+footer{
+
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background: linear-gradient(180deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
+   
+}
+
+.lineas{
+    text-align: center;
+    margin-top: 15rem;
+
+    span{
+
+        display: inline-flex;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 84vh;
+        height: 2px;
+        background-color: $primary-color;
+        
+    }
+
+
+    .logo-footer{
+        max-width: 10vw;
+        min-width: 18vh;
+        height: 8vh;
+        
+    }
+
+    .copy{
+        margin-top: 2rem;
+    }
+}
+    
+
+
+.info-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 8rem;
+    
+    .conocenos, .ayuda, .condiciones{
+        font-size: calc(1em + 0.2vw);
+        display: flex;
+        
+        flex-direction: column;
+        gap: 2rem;
+    
+        a{
+            text-decoration: none;
+        }
+    }
+    
+    .rrss-footer{
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:1rem;
+
+        img{
+            max-width: 40vw;
+            min-width: 29vh;
+            height: 12vh;
+        }
+    }
+}
+
+
+

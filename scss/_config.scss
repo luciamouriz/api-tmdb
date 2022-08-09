@@ -1,0 +1,41 @@
+$primary-color: white;
+$secundary-color:#139ECA;
+$font-family:(
+    ruda: "Ruda",
+    rudaBold: "Ruda Bold",
+    rudaextraBold: "Ruda ExtraBold",
+    gill: "Gill Sans Ultra Bold Condensed"
+);
+
+//Añadimos el mapa de fuentes
+@function fontfamily($family-value){
+    @return map-get($font-family, $family-value );
+}
+
+@mixin flexbox-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin linear90{
+    background: linear-gradient(90deg, rgba(19, 158, 202, 0.57) 8.93%, rgba(19, 158, 202, 0.291118) 71.87%, rgba(19, 158, 202, 0) 108.65%);
+}
+
+@mixin linear270{
+    background: linear-gradient(270deg, rgba(19, 158, 202, 0.57) 8.93%, rgba(19, 158, 202, 0.291118) 71.87%, rgba(19, 158, 202, 0) 108.65%);
+}
+
+@mixin mobile{
+    @media(max-width: 767px){
+        @content;
+    }
+}
