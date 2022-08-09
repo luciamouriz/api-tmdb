@@ -11,16 +11,15 @@ main {
   background-repeat: no-repeat;
 }
 
-.portada {
+.contenedor-portada {
+  position: relative;
+}
+.contenedor-portada .portada {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 50vw;
   margin-bottom: 5em;
-}
-
-.contenedor-portada {
-  position: relative;
 }
 .contenedor-portada .card {
   position: absolute;
@@ -38,13 +37,13 @@ main {
 .contenedor-portada .card .descripcion {
   font-size: calc(1em + 0.1vw);
 }
-.contenedor-portada .botones {
+.contenedor-portada .card .botones {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   height: 6rem;
 }
-.contenedor-portada .botones .boton-valorado {
+.contenedor-portada .card .botones .boton-valorado {
   width: 30%;
   display: flex;
   flex-direction: row;
@@ -56,12 +55,12 @@ main {
   border: 0;
   border-radius: 0.5rem;
 }
-.contenedor-portada .botones .boton-valorado .star {
+.contenedor-portada .card .botones .boton-valorado .star {
   font-size: calc(1em + 2.5vw);
   margin-bottom: 1rem;
   color: #16CA13;
 }
-.contenedor-portada .botones button {
+.contenedor-portada .card .botones #play {
   cursor: pointer;
   width: 40%;
   font-size: calc(1em + 1.3vw);
@@ -69,10 +68,10 @@ main {
   border: 0;
   border-radius: 0.5rem;
 }
-.contenedor-portada .botones button:hover {
+.contenedor-portada .card .botones #play:hover {
   background: rgba(0, 0, 0, 0.3);
 }
-.contenedor-portada .botones button:active {
+.contenedor-portada .card .botones #play:active {
   background-color: #139ECA;
 }
 .contenedor-portada .degradado {
@@ -114,6 +113,41 @@ main {
 @media (max-width: 767px) {
   .flecha-color {
     width: 10%;
+  }
+  .contenedor-portada .portada {
+    height: 60vw;
+    margin-bottom: 2em;
+  }
+  .contenedor-portada .card {
+    width: 100%;
+  }
+  .contenedor-portada .card .titulo {
+    font-size: 4vw;
+  }
+  .contenedor-portada .card .tipo-video {
+    display: none;
+  }
+  .contenedor-portada .card .descripcion {
+    display: none;
+  }
+  .contenedor-portada .card .botones {
+    height: 2.5rem;
+    gap: 0.5rem;
+  }
+  .contenedor-portada .card .botones .boton-valorado {
+    width: 30%;
+    gap: 0.5rem;
+  }
+  .contenedor-portada .card .botones .boton-valorado #valorado {
+    font-size: 5vw;
+  }
+  .contenedor-portada .card .botones .boton-valorado .star {
+    margin-bottom: 0.4rem;
+    font-size: 10vw;
+  }
+  .contenedor-portada .card .botones #play {
+    width: 30%;
+    font-size: 4vw;
   }
 }
 header {
@@ -252,7 +286,7 @@ footer {
 .contenedor-style h2 {
   font-family: "Ruda Bold";
   margin-left: 3rem;
-  font-size: calc(1em + 1vw);
+  font-size: calc(0.5em + 1.5vw);
 }
 
 .carousel-size {

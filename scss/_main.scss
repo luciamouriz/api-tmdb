@@ -16,18 +16,17 @@ main{
 
 
 //PORTADA---------------------------------------------------//
-.portada{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 50vw;
-    margin-bottom: 5em;
-}
-
-
 .contenedor-portada{
     position: relative;
-    
+
+    .portada{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 50vw;
+        margin-bottom: 5em;
+    }
+
     .card{
         position: absolute;
         z-index: 70;
@@ -50,50 +49,50 @@ main{
             font-size: calc(1em + 0.1vw);
             
         }
-    }
 
-   .botones{
+        .botones{
 
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        height: 6rem;
-
-        .boton-valorado{
-            width: 30%;
-            @include conf.flexbox-row;
+            display: flex;
+            flex-direction: row;
             gap: 2rem;
-            font-size: calc(1em + 1.3vw);
-            //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
-            background-color: #139fca6b;
-            border: 0;
-            border-radius: 0.5rem;
-            
-            .star{
-                font-size: calc(1em + 2.5vw);
-                margin-bottom: 1rem;
-                color: #16CA13;
+            height: 6rem;
+    
+            .boton-valorado{
+                width: 30%;
+                @include conf.flexbox-row;
+                gap: 2rem;
+                font-size: calc(1em + 1.3vw);
+                //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
+                background-color: #139fca6b;
+                border: 0;
+                border-radius: 0.5rem;
+                
+                .star{
+                    font-size: calc(1em + 2.5vw);
+                    margin-bottom: 1rem;
+                    color: #16CA13;
+                }
             }
-        }
-
-
-        button{
-
-            cursor: pointer;
-            width: 40%;
-            font-size: calc(1em + 1.3vw);
-            //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
-            background-color: #139ECA;
-            border: 0;
-            border-radius: 0.5rem;
-
-            &:hover{
-                background: rgba(0, 0, 0, 0.3)
-            }
-            &:active{
+    
+    
+            #play{
+    
+                cursor: pointer;
+                width: 40%;
+                font-size: calc(1em + 1.3vw);
+                //background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 36.69%, rgba(19, 158, 202, 0.243914) 53.36%, rgba(19, 158, 202, 0.106218) 63.47%, rgba(19, 158, 202, 0) 73.94%);
                 background-color: #139ECA;
+                border: 0;
+                border-radius: 0.5rem;
+    
+                &:hover{
+                    background: rgba(0, 0, 0, 0.3)
+                }
+                &:active{
+                    background-color: #139ECA;
+                }
             }
-        }
+         }
    }
     
     
@@ -145,10 +144,36 @@ main{
 //Medias mobile 
 @include conf.mobile{
     
-    .flecha-color{
-        width: 10%;
-
+    .flecha-color{width: 10%;}
+    .contenedor-portada{  
+        .portada{
+            height: 60vw;
+            margin-bottom: 2em;
+        }
+    
+        .card{      
+            width: 100%;      
+            .titulo{font-size: 4vw;}
+            .tipo-video{display: none; }
+            .descripcion{display: none;}
+            .botones{
+                height: 2.5rem;
+                gap: 0.5rem;
+                
+                .boton-valorado{
+                    width: 30%;
+                    gap: 0.5rem;
+                    #valorado{font-size: 5vw;}
+                    .star{margin-bottom:0.4rem; font-size: 10vw;}
+                }
+    
+                #play{
+                    width: 30%;
+                    font-size: 4vw;
+                }
+            }
+        }
+    
+        
     }
-    
-    
 }
