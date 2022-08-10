@@ -11,7 +11,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 3em 0 3em;
+    margin: 0 4em 0 1em;
     
     .logo{
         width: 60%;
@@ -25,10 +25,10 @@ nav{
     
         .texto{
             font-family: conf.fontfamily(ruda);
-            font-size: calc(1em + 1vw);
+            font-size: calc(0.8em + 1vw);
             color: conf.$primary-color;
             background: transparent;
-            width: 100%;
+            width: calc(5em + 7vw);
             border: 0;
             border-bottom: 1px white solid;
             &:focus{

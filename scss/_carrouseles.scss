@@ -54,7 +54,7 @@
     h2{
         font-family: conf.fontfamily(rudaBold);
         margin-left: 3rem;
-        font-size: calc(0.6em + 1.5vw);
+        font-size: calc(0.7em + 1.5vw);
     }
 }
 
@@ -64,7 +64,8 @@
     padding: 3rem 0 3rem 0;
     overflow: hidden;
     scroll-behavior: smooth;
-    
+    scroll-snap-type: x proximity;
+
     .carousel-flex{
         display: flex;
         flex-wrap: nowrap;
@@ -78,8 +79,8 @@
             box-shadow: 5px 5px 10px rgba(0,0,0, .3);
           
             img{
-                width: calc(3em + 11vw);
-                height: calc(5em + 15vw);
+                width: calc(4.5em + 11vw);
+                height: calc(7em + 15vw);
             }
 
             &:hover{
@@ -103,27 +104,27 @@
     padding: 0 2rem 0 2rem;
     background: linear-gradient(0deg, rgba(19, 158, 202, 0.73) 0%, rgba(19, 158, 202, 0.54) 24.28%, rgba(19, 158, 202, 0.33) 58.64%, rgba(19, 158, 202, 0) 113.72%);
     border-radius: 1rem;
+    transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-    
+
+    &:hover{
+        transform: scale(1.1);
+        transform-origin: center;
+    }
+
     .num-video{
         @include conf.flexbox-row;
         margin-top: 1rem;
         margin-bottom: 1rem;
         gap: 2rem;
-        transition: .3s ease all;
+        
       
         img{
-            width: calc(3em + 11vw);
+            width: calc(3em + 10vw);
             height: calc(5em + 13vw);
             border-radius: 1rem;
             box-shadow: 5px 5px 10px rgba(0,0,0, .3);
         }
-
-        &:hover{
-            transform: scale(1.2);
-            transform-origin: center;
-        }
-        
 
     }
 
@@ -152,9 +153,8 @@
             box-shadow: 5px 5px 10px rgba(0,0,0, .3);
           
             img{
-                max-width: 45vw;
-                min-width: 45vh;
-                height: 75vh;
+                width: calc(7.5em + 18vw);
+                height: calc(13em + 20vw);
            }
         
             &:hover{

@@ -45,7 +45,7 @@
 .contenedor-style h2 {
   font-family: "Ruda Bold";
   margin-left: 3rem;
-  font-size: calc(0.6em + 1.5vw);
+  font-size: calc(0.7em + 1.5vw);
 }
 
 .carousel-size {
@@ -53,6 +53,8 @@
   padding: 3rem 0 3rem 0;
   overflow: hidden;
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity;
 }
 .carousel-size .carousel-flex {
   display: flex;
@@ -67,8 +69,8 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .carousel-size .carousel-flex .popular img, .carousel-size .carousel-flex .pelicula img, .carousel-size .carousel-flex .serie img, .carousel-size .carousel-flex .visto img {
-  width: calc(3em + 11vw);
-  height: calc(5em + 15vw);
+  width: calc(4.5em + 11vw);
+  height: calc(7em + 15vw);
 }
 .carousel-size .carousel-flex .popular:hover, .carousel-size .carousel-flex .pelicula:hover, .carousel-size .carousel-flex .serie:hover, .carousel-size .carousel-flex .visto:hover {
   transform: scale(1.2);
@@ -80,7 +82,12 @@
   padding: 0 2rem 0 2rem;
   background: linear-gradient(0deg, rgba(19, 158, 202, 0.73) 0%, rgba(19, 158, 202, 0.54) 24.28%, rgba(19, 158, 202, 0.33) 58.64%, rgba(19, 158, 202, 0) 113.72%);
   border-radius: 1rem;
+  transition: 0.3s ease all;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.top:hover {
+  transform: scale(1.1);
+  transform-origin: center;
 }
 .top .num-video {
   display: flex;
@@ -90,17 +97,12 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   gap: 2rem;
-  transition: 0.3s ease all;
 }
 .top .num-video img {
-  width: calc(3em + 11vw);
+  width: calc(3em + 10vw);
   height: calc(5em + 13vw);
   border-radius: 1rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-.top .num-video:hover {
-  transform: scale(1.2);
-  transform-origin: center;
 }
 .top .top-num {
   font-size: calc(4em + 8vw);
@@ -121,9 +123,8 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion img {
-  max-width: 45vw;
-  min-width: 45vh;
-  height: 75vh;
+  width: calc(7.5em + 18vw);
+  height: calc(13em + 20vw);
 }
 .contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion:hover {
   transform: scale(1.2);
@@ -228,7 +229,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 3em 0 3em;
+  margin: 0 4em 0 1em;
 }
 nav .logo {
   width: 60%;
@@ -241,10 +242,10 @@ nav .menu {
 }
 nav .menu .texto {
   font-family: "Ruda";
-  font-size: calc(1em + 1vw);
+  font-size: calc(0.8em + 1vw);
   color: white;
   background: transparent;
-  width: 100%;
+  width: calc(5em + 7vw);
   border: 0;
   border-bottom: 1px white solid;
 }
@@ -488,17 +489,26 @@ main {
 
 @media (max-width: 767px) {
   .contenedor-portada .portada {
-    height: 60vw;
+    height: 75vw;
     margin-bottom: 2em;
   }
+  .contenedor-portada .card {
+    top: 30%;
+    gap: 0.5rem;
+  }
   .contenedor-portada .card .titulo {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .contenedor-portada .card .tipo-video {
-    display: none;
+    font-size: 2.5vw;
   }
   .contenedor-portada .card .descripcion {
-    display: none;
+    width: 80%;
+    height: 35px;
+    font-size: 3vw;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .contenedor-portada .card .botones {
     height: 2.5rem;
@@ -523,7 +533,25 @@ main {
   .carousel-size {
     padding: 1.5rem 0 1.5rem 0;
   }
+  .carousel-size .carousel-flex {
+    gap: 1rem;
+    margin-left: 1rem;
+  }
   .visto span {
     height: 5px;
+  }
+  .contenedor-style h2 {
+    margin-left: 1rem;
+  }
+  footer {
+    padding-top: 5rem;
+  }
+  .info-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  *:hover {
+    pointer-events: none;
   }
 }

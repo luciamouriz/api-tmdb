@@ -150,14 +150,23 @@ main{
 @include conf.mobile{
     .contenedor-portada{  
         .portada{
-            height: 60vw;
+            height: 75vw;
             margin-bottom: 2em;
         }
     
-        .card{      
-            .titulo{font-size: 4vw;}
-            .tipo-video{display: none; }
-            .descripcion{display: none;}
+        .card{    
+            top:30%;
+            gap:0.5rem;  
+            .titulo{font-size: 6vw;}
+            .tipo-video{font-size: 2.5vw; }
+            .descripcion{
+                    width: 80%;
+                    height: 35px;
+                    font-size: 3vw; 
+                    word-wrap: break-word;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
             .botones{
                 height: 2.5rem;
                 gap: 0.5rem;
@@ -180,6 +189,27 @@ main{
     
     }
 
-    .carousel-size { padding: 1.5rem 0 1.5rem 0;}
+    .carousel-size { 
+        padding: 1.5rem 0 1.5rem 0;
+        .carousel-flex{
+            gap:1rem;
+            margin-left: 1rem;
+        }
+    }
+
     .visto{span{height: 5px;}}
+    .contenedor-style{ h2{margin-left: 1rem;}}
+
+
+    //Footer
+    footer{padding-top: 5rem;}
+    .info-footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    *{&:hover{pointer-events: none;}}
+    
+
 }
