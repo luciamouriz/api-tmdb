@@ -49,7 +49,7 @@ footer{
     gap: 8rem;
     
     .conocenos, .ayuda, .condiciones{
-        font-size: calc(1em + 0.2vw);
+        font-size: calc(0.8em + 0.2vw);
         display: flex;
         
         flex-direction: column;
@@ -61,11 +61,12 @@ footer{
     }
     
     .rrss-footer{
+        font-size: calc(0.8em + 0.2vw);
         width: 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap:1rem;
+        gap: 1rem;
 
         img{
             max-width: 40vw;
