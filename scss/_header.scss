@@ -25,7 +25,7 @@ nav{
     
         .texto{
             font-family: conf.fontfamily(ruda);
-            font-size: calc(0.8em + 1vw);
+            font-size: conf.$Snormal;
             color: conf.$primary-color;
             background: transparent;
             width: calc(7em + 7vw);

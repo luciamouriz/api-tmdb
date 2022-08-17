@@ -7,6 +7,12 @@ $font-family:(
     gill: "Gill Sans Ultra Bold Condensed"
 );
 
+/*Tamaño de letra*/
+$Stitle: calc(1em + 2vw); //35px
+$Ssubtitule: calc(1em + 0.9vw); //24px
+$Snormal: calc(1em + 0.7vw); //22px
+
+
 //Añadimos el mapa de fuentes
 @function fontfamily($family-value){
     @return map-get($font-family, $family-value );

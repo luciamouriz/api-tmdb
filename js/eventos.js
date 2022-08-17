@@ -8,14 +8,14 @@ Por eso en el DOM de los carouseles SIEMPRE tiene que estar de ultimo el contene
 flechaIzquierda.forEach((flechaIzquierda) => {
 	flechaIzquierda.addEventListener('click', (e) => {
 		flechaIzquierda.parentNode.lastElementChild.scrollLeft -=  flechaIzquierda.parentNode.lastElementChild.offsetWidth;
-	},false);
+	});
 });
 
 flechaDerecha.forEach((flechaDerecha) => {
 	flechaDerecha.addEventListener('click', (e) => {
 		flechaDerecha.parentNode.lastElementChild.scrollLeft +=  flechaDerecha.parentNode.lastElementChild.offsetWidth;
        
-	},false);
+	});
 });
 
 function searchVideos(){
@@ -31,7 +31,7 @@ function searchVideos(){
             document.getElementById("buscar-videos").innerHTML = ""; 
             for(i =0 ; i<data.results.length; i++){
                 if(data.results[i].poster_path){
-                    document.getElementById("buscar-videos").innerHTML += "<a href='ficha.html?type=movie&id="+data.results[i].id+"'><img src='"+IMG_URL_S+data.results[i].poster_path+"' alt='Imagen portada'></a>"
+                    document.getElementById("buscar-videos").innerHTML += "<a href='ficha.html?type=movie&id="+data.results[i].id+"'><img src='"+IMG_URL_M+data.results[i].poster_path+"' alt='Imagen portada'></a>"
                 }
             }
             

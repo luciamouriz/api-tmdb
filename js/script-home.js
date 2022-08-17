@@ -126,7 +126,7 @@ function getPortada(data){
     }
     
     //Añadimos sipnosis de pelicula o serie
-    document.querySelector(".descripcion").innerHTML=data[0].results[aleatorio].overview.substr(0,300) + "...";
+    document.querySelector(".descripcion").innerHTML=data[0].results[aleatorio].overview.substr(0,200) + "...";
 
     //Añadimos votos, valoracion
     let votos = data[0].results[aleatorio].vote_average;

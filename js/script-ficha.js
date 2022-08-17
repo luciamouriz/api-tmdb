@@ -162,7 +162,7 @@ function existVideo(data){
         }
 
         let idvideo = data.videos.results[j].key
-        document.getElementById("media").innerHTML = '<iframe width="100%" height="515" src="https://www.youtube.com/embed/'+idvideo+'?autoplay=1&controls=0&modestbraning=1&loop=1&showinfo=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        document.getElementById("media").innerHTML = '<iframe width="100%" height="515" src="https://www.youtube.com/embed/'+idvideo+'?autoplay=1&modestbraning=1&loop=1&showinfo=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
                 
     }else{
         let rutaIMG = data.backdrop_path

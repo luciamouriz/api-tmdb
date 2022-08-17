@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Tamaño de letra*/
 /*Carruseles de todas las paginas*/
 .flecha-color {
   position: absolute;
@@ -6,12 +7,13 @@
   font-size: 3rem;
   width: calc(0.7em + 2vw);
   height: calc(3em + 11vw);
-  top: 20%;
+  top: 24%;
   line-height: 3rem;
   color: white;
   cursor: pointer;
   opacity: 1;
   z-index: 80;
+  border-radius: 0.6rem;
   transition: 0.2s ease all;
 }
 
@@ -44,8 +46,7 @@
 }
 .contenedor-style h2 {
   font-family: "Ruda Bold";
-  margin-left: 3rem;
-  font-size: calc(0.7em + 1.5vw);
+  margin-left: 3%;
 }
 
 .carousel-size {
@@ -53,8 +54,6 @@
   padding: 3rem 0 3rem 0;
   overflow: hidden;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: x proximity;
-      scroll-snap-type: x proximity;
 }
 .carousel-size .carousel-flex {
   display: flex;
@@ -124,7 +123,7 @@
 }
 .contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion img {
   width: calc(7.5em + 18vw);
-  height: calc(13em + 20vw);
+  height: calc(14em + 20vw);
 }
 .contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion:hover {
   transform: scale(1.2);
@@ -135,13 +134,12 @@
   margin-left: 0;
 }
 .contenedor-reparto .reparto {
-  font-size: 1rem;
+  text-align: center;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .contenedor-reparto .reparto img {
-  max-width: 45vw;
-  min-width: 15vh;
-  height: 35vh;
+  width: calc(4em + 7vw);
+  height: calc(6em + 10vw);
 }
 .contenedor-reparto .reparto .depart {
   font-family: "Ruda Bold";
@@ -161,16 +159,15 @@
 }
 .contenedor-similar .similar .title-similar {
   position: absolute;
-  font-size: 2rem;
+  font-size: calc(1em + 0.9vw);
   top: 70%;
   left: 4%;
   width: 96%;
   background-color: rgba(19, 159, 202, 0.4823529412);
 }
 .contenedor-similar .similar img {
-  max-width: 45vw;
-  min-width: 60vh;
-  height: 40vh;
+  width: calc(14em + 10vw);
+  height: calc(7em + 10vw);
 }
 .contenedor-similar .similar:hover {
   transform: scale(1.2);
@@ -198,18 +195,18 @@
 }
 .contenedor-episodes .flecha-color {
   height: 75%;
-  top: 12%;
+  top: 16%;
 }
 .contenedor-episodes .episode {
   position: relative;
   margin-bottom: 6rem;
 }
 .contenedor-episodes .episode img {
-  width: 23vw;
-  height: 30vh;
+  width: calc(14em + 10vw);
+  height: calc(7em + 10vw);
 }
 .contenedor-episodes .episode .title-episode {
-  font-size: 1.5rem;
+  font-size: calc(1em + 0.9vw);
 }
 .contenedor-episodes .episode .descripcion-episodio {
   position: absolute;
@@ -217,7 +214,6 @@
   flex-direction: column;
   gap: 1rem;
   top: 104%;
-  font-size: 0.9rem;
 }
 
 header {
@@ -242,7 +238,7 @@ nav .menu {
 }
 nav .menu .texto {
   font-family: "Ruda";
-  font-size: calc(0.8em + 1vw);
+  font-size: calc(1em + 0.7vw);
   color: white;
   background: transparent;
   width: calc(7em + 7vw);
@@ -291,7 +287,6 @@ footer {
   gap: 8rem;
 }
 .info-footer .conocenos, .info-footer .ayuda, .info-footer .condiciones {
-  font-size: calc(0.8em + 0.2vw);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -300,7 +295,6 @@ footer {
   text-decoration: none;
 }
 .info-footer .rrss-footer {
-  font-size: calc(0.8em + 0.2vw);
   width: 10%;
   display: flex;
   flex-direction: column;
@@ -316,7 +310,7 @@ footer {
 /*Ficha de video*/
 .contenedor-ficha {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-template-rows: 1fr;
   padding-top: 3rem;
 }
@@ -329,18 +323,18 @@ footer {
   text-decoration: none;
 }
 .contenedor-ficha .title-ficha {
-  font-size: calc(1em + 3vw);
+  font-size: calc(1em + 2vw);
   font-family: "Ruda ExtraBold";
 }
 .contenedor-ficha .ficha {
-  grid-column: 2/7;
+  grid-column: 2/11;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 .contenedor-ficha .ficha #genero {
-  font-family: "Ruda ExtraBold";
-  font-size: calc(1em + 1vw);
+  font-family: "Ruda Bold";
+  font-size: calc(1em + 0.9vw);
 }
 
 /*Lo añadimos mediante javascript*/
@@ -356,7 +350,7 @@ footer {
 }
 .contenedor-seasons .title-temp {
   font-family: "Ruda Bold";
-  font-size: 2rem;
+  font-size: calc(1em + 0.9vw);
 }
 .contenedor-seasons .contenedor-cajas-seasons {
   display: flex;
@@ -368,7 +362,6 @@ footer {
   font-size: 1rem;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  margin: 0 3rem 0 3rem;
   cursor: pointer;
 }
 
@@ -386,6 +379,10 @@ html, body {
 main {
   background: linear-gradient(359.38deg, #139ECA -11.15%, rgba(19, 158, 202, 0.52405) 26.69%, rgba(19, 158, 202, 0.243914) 43.36%, rgba(19, 158, 202, 0.106218) 53.47%, rgba(19, 158, 202, 0) 63.94%), #080606;
   background-repeat: no-repeat;
+}
+
+h2 {
+  font-size: calc(1em + 0.9vw);
 }
 
 .contenedor-portada {
@@ -406,20 +403,18 @@ main {
   gap: 1rem;
   top: 40%;
   left: 5%;
-  width: 100%;
+  width: 90%;
 }
 .contenedor-portada .card .titulo {
-  font-size: calc(1em + 1.4vw);
+  font-size: calc(1em + 2vw);
 }
 .contenedor-portada .card .descripcion {
-  width: 60%;
-  font-size: calc(1em + 0.1vw);
+  width: 80%;
 }
 .contenedor-portada .card .botones {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  height: 6rem;
 }
 .contenedor-portada .card .botones .boton-valorado {
   width: 15%;
@@ -428,7 +423,7 @@ main {
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
-  font-size: calc(1em + 1.3vw);
+  font-size: calc(1em + 0.9vw);
   background-color: rgba(19, 159, 202, 0.4196078431);
   border: 0;
   border-radius: 0.5rem;
@@ -441,7 +436,7 @@ main {
 .contenedor-portada .card .botones #play {
   cursor: pointer;
   width: 20%;
-  font-size: calc(1em + 1.3vw);
+  font-size: calc(1em + 0.9vw);
   background-color: #139ECA;
   border: 0;
   border-radius: 0.5rem;
@@ -459,7 +454,6 @@ main {
   height: 100%;
 }
 
-/*Buscar Peliculas o series*/
 .buscar {
   position: absolute;
   display: none;
@@ -473,14 +467,14 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 2rem;
   padding: 3rem;
   z-index: 105;
   background-color: #080606;
 }
 .buscar .buscar-videos img {
-  width: 130%;
-  height: 130%;
+  width: calc(6em + 8vw);
+  height: calc(10em + 10vw);
   transition: 0.3s ease all;
 }
 .buscar .buscar-videos img:hover {
@@ -504,12 +498,11 @@ main {
     font-size: 2.5vw;
   }
   .contenedor-portada .card .descripcion {
-    width: 80%;
-    height: 35px;
+    width: 90%;
+    min-height: 2%;
     font-size: 3vw;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
   .contenedor-portada .card .botones {
     height: 2.5rem;
@@ -540,9 +533,6 @@ main {
   }
   .visto span {
     height: 5px;
-  }
-  .contenedor-style h2 {
-    margin-left: 1rem;
   }
   footer {
     padding-top: 5rem;
