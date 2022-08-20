@@ -49,7 +49,7 @@ el diseño hecho y pense que era buena idea utilizarlo para integrar en un proye
 </ul>
 <p><b>Nota:</b> Respecto a los colores, queria unos colores diferentes a las demas plataformas de streamming populares, asi que me decante por un color turquesa con degradado oscuro.<p>
 <h4>Programas que he usado en este proceso: FIGMA y PHOTOSHOP</h4>
-
+<img src="https://github.com/luciamouriz/api-tmdb/blob/main/img/Web_Streaming_Home.jpg" width=200>
 <h2>Desarrollo Web</h2>
 <h3>Tecnologias usadas</h3>
 <ul>
