@@ -31,7 +31,7 @@
 <hr>
 <h2>Visión General</h2>
 <h3>Como surje este proyecto</h3>
-<p>Este proyecto viene de otro que hice en un curso de UX/UI que hice hace tiemepo en el que realice la parte visual de una platafoma de streamming tanto en Desktop como en Mobile, asi que en cierto modo ya tenia hace tiempo
+<p>Este proyecto viene de otro que hice en un curso de UX/UI en el que realice la parte visual de una platafoma de streamming tanto en Desktop como en Mobile, asi que en cierto modo ya tenia hace tiempo
 el diseño hecho y pense que era buena idea utilizarlo para integrar en un proyecto las API REST.</p>
 <h3>Enlaces </h3>
 <a href="https://www.themoviedb.org/">Pag TMDB</a><br>
