@@ -1,9 +1,6 @@
 const flechaIzquierda = document.querySelectorAll('.flecha-izquierda');
 const flechaDerecha = document.querySelectorAll('.flecha-derecha');
 
-/*Primero obtenemos el div padre de flechaizquierda y derecha
-Despues obtenemos el ultimo hijo que sera el carousel que hay que mover
-Por eso en el DOM de los carouseles SIEMPRE tiene que estar de ultimo el contenedor-carousel-?*/
 
 flechaIzquierda.forEach((flechaIzquierda) => {
 	flechaIzquierda.addEventListener('click', (e) => {
@@ -43,22 +40,3 @@ function searchVideos(){
     }
 }
 
-
-    
-/*
-
-
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
-
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});*/

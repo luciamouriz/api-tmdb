@@ -17,12 +17,6 @@ const URLS = [POPULAR,TOP10,MOVIES,TV,RECOMENDATION];
 
 getCarouseles(URLS);
 
-/*  
-* - Recorremos las URLS con map(foreach) que pasamos por parametro a fetch 
-* - Fetch devuelve una promesa que pasamos por parametro como un objeto response
-* - En el primer then recorremos todos los objetos responses para despues retornar el cuerpo de cada uno de ellos como un JSON. .map es como un for, recorremos el array de objetos response
-* - En el segundo then pasa por parametro un array data que contendra todos los json
-*/
 
 function getCarouseles(urls){
 
@@ -80,13 +74,7 @@ function showCarouseles(data){
     
 }
 
-/**
- * Esta funcion se a realizado de esta manera por los problemas presentados:
- * 1º Al dar click a la pelicula nos redirige a otro html y al volver a index.html si tuvieramos una variable inicializada se volveria a inicializar, por eso he intentado no inicializar nada
- * 2º El primer click como el localstorage.id no tiene nada, nos aparece undefined y luego seguidamente el id (esto se arregla inicializando la variable, pero como hemos dicho arriba no podemos utilizando este metodo), eso lo solucionamos en la funcion () que eliminamos ese registro "undefined"
- * 3º Esta funcion la ejecuta el atributo onclick, a esta funcion se le pasa el id por parametro (lo hice asi porque asi directamente le paso el id desde la llamada a la url)
- * @param {*} id 
- */
+
 function data(id){
     localStorage.setItem("id", localStorage.id += id+"," )
     
@@ -163,78 +151,9 @@ function checkVistos(data,vistos){
 }
     
 
-
-
 function play(media,id){
 
     location.href="ficha.html?type="+media+"&id="+id;
 }
     
-    
-    /*let tagA = [...videos]
-    for(let i=0;i<tagA.length;i++){
-        tagA[i].addEventListener("click", function(){
-            alert("aqui")
-            let id = tagA[i].getAttributeNode("id").value
-            
-        })
-        
-
-    }
-    
-    let Anchors = document.getElementsByTagName("a");
-    for (let i = 0; i < Anchors.length ; i++) {
-    Anchors[i].addEventListener("click", function (event) {
-            event.preventDefault();
-            alert("aolg")
-        },false);
-    }*/
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////*
-/*
-
-function generarTrailers(idPelicula){
-    fetch(`https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=6c214eacc098404fa7eea530184eead5&language=es`)
-
-    .then((response) => response.json())
-    .then(data => {
-        console.log(idPelicula)
-        if (typeof(data.results[0]) !== 'undefined') {
-            document.getElementById("trailer").setAttribute("src","https://www.youtube.com/embed/"+data.results[0].key+"?autoplay=1&controls=0&modestbraning=1&loop=1&showinfo=1")
-            
-        }else{
-            let aleatorio2 = arrayPeliculas[Math.floor(Math.random() * arrayPeliculas.length)];
-            console.log("id pelicula aleatorio: "+aleatorio2)
-            generarTrailers(aleatorio2);
-        }
-        
-        
-    })
-
-
-    .catch()
-}
-
-function existVideos(id,type){
-    let url = "";
-
-    if(type === "movie"){
-        url = BASE_URL +"/movie/"+id+"?"+API_KEY+"&append_to_response=videos,images";
-    }else{
-        url = BASE_URL +"/tv/"+id+"?"+API_KEY+"&append_to_response=videos,images";
-    }
-    
-
-    fetch(url)
-    .then( response => response.json())
-    .then(data => {
-
-        console.log(data)
-    })
-    .catch(error=> {
-        console.log(error);
-    });
-
-
-}*/
+  
