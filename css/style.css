@@ -232,7 +232,7 @@ nav {
   margin: 0 4em 0 1em;
 }
 nav .logo {
-  width: 60%;
+  width: calc(6em + 3vw);
 }
 nav .menu {
   display: flex;
@@ -273,9 +273,8 @@ footer {
   background-color: white;
 }
 .lineas .logo-footer {
-  max-width: 10vw;
-  min-width: 18vh;
-  height: 8vh;
+  width: calc(7em + 3vw);
+  height: calc(3em + 1vw);
 }
 .lineas .copy {
   margin-top: 2rem;
@@ -306,9 +305,8 @@ footer {
   gap: 1rem;
 }
 .info-footer .rrss-footer img {
-  max-width: 40vw;
-  min-width: 29vh;
-  height: 12vh;
+  width: calc(12em + 3vw);
+  height: calc(5em + 1vw);
 }
 
 /*Ficha de video*/
@@ -511,7 +509,7 @@ h2 {
     text-overflow: ellipsis;
   }
   .contenedor-portada .card .botones {
-    height: 2.5rem;
+    height: 2%;
     gap: 0.5rem;
   }
   .contenedor-portada .card .botones .boton-valorado {

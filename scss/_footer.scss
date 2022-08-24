@@ -26,9 +26,8 @@ footer{
 
 
     .logo-footer{
-        max-width: 10vw;
-        min-width: 18vh;
-        height: 8vh;
+        width: calc(7em + 3vw);
+        height: calc(3em + 1vw);
         
     }
 
@@ -67,9 +66,8 @@ footer{
         gap: 1rem;
 
         img{
-            max-width: 40vw;
-            min-width: 29vh;
-            height: 12vh;
+            width: calc(12em + 3vw);
+            height: calc(5em + 1vw);
         }
     }
 }
