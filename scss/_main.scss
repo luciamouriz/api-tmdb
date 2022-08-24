@@ -194,7 +194,17 @@ h2{
             gap:1rem;
             margin-left: 1rem;
         }
+        .popular, .pelicula, .serie, .visto{
+            &:hover{transform: none;}
+        }
     }
+
+    //Quitar hovers
+    .contenedor-recomendaciones{
+    .contenedor-carousel-recomendaciones{
+    .recomendacion{ &:hover{transform: none;}}}}
+    .contenedor-similar{.similar{&:hover{transform: none; }}}
+
 
     .visto{span{height: 5px;}}
     
@@ -208,7 +218,7 @@ h2{
         gap: 5rem;
     }
 
-  
+    
     
 
 }

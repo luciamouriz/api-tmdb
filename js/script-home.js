@@ -58,8 +58,8 @@ function showCarouseles(data){
     * TOP 10 TENDENCIAS SEMANALES Y RECOMENDACIONES
     */
     for(i =1 ; i<=10; i++){
-        document.getElementById("carousel-tendencia").innerHTML += " <div class='top'><div class='num-video'><p class='top-num'>"+i+"</p><a onclick='data("+data[1].results[i].id+")' href='ficha.html?type="+data[1].results[i].media_type+"&id="+data[1].results[i].id+"'><img src='"+IMG_URL_M+data[1].results[i].poster_path+"' alt='Imagen portada'></a></div></div>";             
-        document.getElementById("carousel-recomendaciones").innerHTML += " <div class='recomendacion'><a onclick='data("+data[4].results[i].id+")' href='ficha.html?type="+data[4].results[i].media_type+"&id="+data[4].results[i].id+"'><img src='"+IMG_URL_M+data[4].results[i].poster_path+"' alt='Imagen portada'></a></div>";             
+        document.getElementById("carousel-tendencia").innerHTML += " <div class='top'><div class='num-video'><p class='top-num'>"+i+"</p><a onclick='saveStorage("+data[1].results[i].id+")' href='ficha.html?type="+data[1].results[i].media_type+"&id="+data[1].results[i].id+"'><img src='"+IMG_URL_M+data[1].results[i].poster_path+"' alt='Imagen portada'></a></div></div>";             
+        document.getElementById("carousel-recomendaciones").innerHTML += " <div class='recomendacion'><a onclick='saveStorage("+data[4].results[i].id+")' href='ficha.html?type="+data[4].results[i].media_type+"&id="+data[4].results[i].id+"'><img src='"+IMG_URL_M+data[4].results[i].poster_path+"' alt='Imagen portada'></a></div>";             
     }
 
     /*
@@ -67,15 +67,15 @@ function showCarouseles(data){
     * Contendran siempre el mismo numero de peliculas y series. (URL)Page = 1
     */
     for(i =0 ; i<=data[2].results.length-1; i++){
-        document.getElementById("carousel-peliculas-populares").innerHTML += " <div class='pelicula'><a onclick='data("+data[2].results[i].id+")' href='ficha.html?type=movie&id="+data[2].results[i].id+"'><img src='"+IMG_URL_M+data[2].results[i].poster_path+"' alt='Imagen portada'></a></div>";             
-        document.getElementById("carousel-series-populares").innerHTML += " <div class='serie'><a onclick='data("+data[3].results[i].id+")' href='ficha.html?type=tv&id="+data[3].results[i].id+"'><img src='"+IMG_URL_M+data[3].results[i].poster_path+"' alt='Imagen portada'></a></div>";             
+        document.getElementById("carousel-peliculas-populares").innerHTML += " <div class='pelicula'><a onclick='saveStorage("+data[2].results[i].id+")' href='ficha.html?type=movie&id="+data[2].results[i].id+"'><img src='"+IMG_URL_M+data[2].results[i].poster_path+"' alt='Imagen portada'></a></div>";             
+        document.getElementById("carousel-series-populares").innerHTML += " <div class='serie'><a onclick='saveStorage("+data[3].results[i].id+")' href='ficha.html?type=tv&id="+data[3].results[i].id+"'><img src='"+IMG_URL_M+data[3].results[i].poster_path+"' alt='Imagen portada'></a></div>";             
     }
 
     
 }
 
 
-function data(id){
+function saveStorage(id){
     localStorage.setItem("id", localStorage.id += id+"," )
     
 }
@@ -87,23 +87,24 @@ function getPortada(data){
     */  
     let arrayMovies = [];
     for(i =0 ; i<data[0].results.length; i++){
-        document.getElementById("carousel-popular").innerHTML += "<div class='popular'><a onclick='data("+data[0].results[i].id+")' href='ficha.html?type="+data[0].results[i].media_type+"&id="+data[0].results[i].id+"'><img src='"+IMG_URL_M+data[0].results[i].poster_path+"' alt='Imagen portada'></a></div>";
+        document.getElementById("carousel-popular").innerHTML += "<div class='popular'><a onclick='saveStorage("+data[0].results[i].id+")' href='ficha.html?type="+data[0].results[i].media_type+"&id="+data[0].results[i].id+"'><img src='"+IMG_URL_M+data[0].results[i].poster_path+"' alt='Imagen portada'></a></div>";
         arrayMovies[i] = data[0].results[i].id;
     }
 
     //Generamos un numero aleatorio para sacar una pelicula aleatoria
     const aleatorio = Math.floor(Math.random() * arrayMovies.length)
-    let portada = document.querySelector(".portada")
+    const portada = document.querySelector(".portada")
     portada.setAttribute("id", data[0].results[aleatorio].id)
+    //Reproducion pelicula portada
     document.getElementById("play").setAttribute("onclick","data("+data[0].results[aleatorio].id+")");
     document.getElementById("play").addEventListener("click", () => play(data[0].results[aleatorio].media_type,data[0].results[aleatorio].id))  
     portada.style.backgroundImage = "url("+IMG_URL_L+data[0].results[aleatorio].backdrop_path+")";
     
     //Añadimos tipo de video si es pelicula o serie
     if(data[0].results[aleatorio].media_type === "movie"){
-        document.querySelector(".tipo-video").innerHTML = "PELICULA";
+        document.querySelector(".tipo-video").innerHTML = "Pelicula";
     }else{
-        document.querySelector(".tipo-video").innerHTML = "SERIE";
+        document.querySelector(".tipo-video").innerHTML = "Serie";
     }
     
     //Añadimos Titulo de la pelicula o serie

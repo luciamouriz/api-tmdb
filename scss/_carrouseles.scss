@@ -215,7 +215,7 @@
         }
         
         img{
-            width: calc(14em + 10vw);
+            width: calc(14em + 13vw);
             height: calc(7em + 10vw);
         }
 
@@ -248,9 +248,11 @@
 
 
 //CARRUSEL EPISODIOS
+.contenedor-episodes-none{
+    display: none;
+}
 
 .contenedor-episodes{
-    display: none;
     margin-bottom: 3rem;
 
     .flecha-color{
@@ -263,20 +265,21 @@
         margin-bottom: 6rem;
         
         img{
-            width: calc(14em + 10vw);
+            width: calc(14em + 13vw);
             height: calc(7em + 10vw);
         }
 
         .title-episode{
-            font-size: conf.$Ssubtitule;
+            font-size: conf.$Snormal;
         }
 
         .descripcion-episodio{
             position: absolute;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 1rem;
-            top: 104%;
+            top: 100%;
         }
     }
 }

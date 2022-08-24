@@ -166,7 +166,7 @@
   background-color: rgba(19, 159, 202, 0.4823529412);
 }
 .contenedor-similar .similar img {
-  width: calc(14em + 10vw);
+  width: calc(14em + 13vw);
   height: calc(7em + 10vw);
 }
 .contenedor-similar .similar:hover {
@@ -189,8 +189,11 @@
   background: linear-gradient(90deg, #139ECA 2.73%, rgba(19, 158, 202, 0.520833) 47.77%, rgba(19, 158, 202, 0) 71.27%);
 }
 
-.contenedor-episodes {
+.contenedor-episodes-none {
   display: none;
+}
+
+.contenedor-episodes {
   margin-bottom: 3rem;
 }
 .contenedor-episodes .flecha-color {
@@ -202,18 +205,19 @@
   margin-bottom: 6rem;
 }
 .contenedor-episodes .episode img {
-  width: calc(14em + 10vw);
+  width: calc(14em + 13vw);
   height: calc(7em + 10vw);
 }
 .contenedor-episodes .episode .title-episode {
-  font-size: calc(1em + 0.9vw);
+  font-size: calc(1em + 0.7vw);
 }
 .contenedor-episodes .episode .descripcion-episodio {
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
-  top: 104%;
+  top: 100%;
 }
 
 header {
@@ -334,7 +338,6 @@ footer {
 }
 .contenedor-ficha .ficha #genero {
   font-family: "Ruda Bold";
-  font-size: calc(1em + 0.9vw);
 }
 
 /*Lo añadimos mediante javascript*/
@@ -530,6 +533,15 @@ h2 {
   .carousel-size .carousel-flex {
     gap: 1rem;
     margin-left: 1rem;
+  }
+  .carousel-size .popular:hover, .carousel-size .pelicula:hover, .carousel-size .serie:hover, .carousel-size .visto:hover {
+    transform: none;
+  }
+  .contenedor-recomendaciones .contenedor-carousel-recomendaciones .recomendacion:hover {
+    transform: none;
+  }
+  .contenedor-similar .similar:hover {
+    transform: none;
   }
   .visto span {
     height: 5px;

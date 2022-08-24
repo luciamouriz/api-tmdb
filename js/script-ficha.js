@@ -60,7 +60,7 @@ function getFicha(){
             document.getElementById("genero").innerHTML += "Pelicula";
             document.getElementById("title-ficha").innerHTML += data.title;
             window.document.title += "Ver | "+data.title;
-            document.getElementById("info").innerHTML += data.release_date.substring(0, 4) +" "+ data.runtime.toString().substring(0, 1) +" h "+data.runtime.toString().substring(1, 3)+" m "+ data.genres[0].name;
+            document.getElementById("info").innerHTML += data.release_date.substring(0, 4) +" "+ data.runtime.toString().substring(0, 1) +"h "+data.runtime.toString().substring(1, 3)+"m  <i>"+ data.genres[0].name+"</i>";
             document.getElementById("sinopsis").innerHTML += data.overview;
                     
             
@@ -69,7 +69,7 @@ function getFicha(){
             document.getElementById("genero").innerHTML += "Serie";
             document.getElementById("title-ficha").innerHTML += data.name;
             window.document.title += "Ver | "+data.name;
-            document.getElementById("info").innerHTML += data.first_air_date.substring(0, 4) +" "+ data.episode_run_time.toString().substring(0, 1) +" h "+data.episode_run_time.toString().substring(1, 3)+" m "+ data.genres[0].name;
+            document.getElementById("info").innerHTML += data.first_air_date.substring(0, 4) +" "+ data.episode_run_time.toString().substring(0, 1) +"h <i>"+ data.genres[0].name+"</i>";
             document.getElementById("sinopsis").innerHTML += data.overview;
 
             //Temporadas de la serie
@@ -82,12 +82,11 @@ function getFicha(){
             season.forEach((season) => {
                 season.addEventListener('click', () => {
 
-                    let cajaEpisodes = document.getElementById("contenedor-episodes")
-                    cajaEpisodes.style.display = "block";
-                    
+                    const cajaEpisodes = document.querySelector(".contenedor-episodes")
+                    cajaEpisodes.classList.toggle("contenedor-episodes-none");
 
                     //Borramos todo lo primero para luego imprimir
-                    let carruselEpisodes = document.getElementById("carousel-episodes");
+                    const carruselEpisodes = document.getElementById("carousel-episodes");
                     carruselEpisodes.innerHTML = "";
 
 
@@ -97,12 +96,17 @@ function getFicha(){
                         document.getElementById("data-"+idseason).appendChild(cajaEpisodes)
                         
 
-                        let EPISODES = BASE_URL + "/tv/" +id+ "/season/"+idseason+API_KEY+"&language=es&append_to_response=videos";
+                        const EPISODES = BASE_URL + "/tv/" +id+ "/season/"+idseason+API_KEY+"&language=es&append_to_response=videos";
                         fetch(EPISODES)
                         .then(response =>(response.json()))
                         .then(data => {
                             for(let i=0;i<data.episodes.length;i++){
-                                carruselEpisodes.innerHTML += `<div class='episode'><div class="descripcion-episodio"><p class='title-episode'>${data.episodes[i].name}</p><p>${data.episodes[i].overview}</p></div><img src='${IMG_URL_M}${data.episodes[i].still_path}' alt='Episodio'></div>`;
+                                if (data.episodes[i].still_path){
+                                    carruselEpisodes.innerHTML += `<div class='episode'><div class="descripcion-episodio"><p class='title-episode'>${data.episodes[i].name}</p><p>${data.episodes[i].overview}</p></div><img src='${IMG_URL_M}${data.episodes[i].still_path}' alt='Episodio'></div>`;
+                                }else{
+                                    carruselEpisodes.innerHTML += `<div class='episode'><div class="descripcion-episodio"><p class='title-episode'>${data.episodes[i].name}</p><p>${data.episodes[i].overview}</p></div><img src='../img/noepisode.png'></div>`;
+                                }
+                                
                                
                             }
                             
@@ -129,7 +133,7 @@ function getFicha(){
 }
 function episodes(idseason){
 
-    let EPISODES = BASE_URL + "/tv/" +id+ "/season/"+idseason+API_KEY+"&language=es&append_to_response=videos";
+    const EPISODES = BASE_URL + "/tv/" +id+ "/season/"+idseason+API_KEY+"&language=es&append_to_response=videos";
 
     fetch(EPISODES)
     
