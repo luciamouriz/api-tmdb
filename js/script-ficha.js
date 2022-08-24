@@ -104,7 +104,7 @@ function getFicha(){
                                 if (data.episodes[i].still_path){
                                     carruselEpisodes.innerHTML += `<div class='episode'><div class="descripcion-episodio"><p class='title-episode'>${data.episodes[i].name}</p><p>${data.episodes[i].overview}</p></div><img src='${IMG_URL_M}${data.episodes[i].still_path}' alt='Episodio'></div>`;
                                 }else{
-                                    carruselEpisodes.innerHTML += `<div class='episode'><div class="descripcion-episodio"><p class='title-episode'>${data.episodes[i].name}</p><p>${data.episodes[i].overview}</p></div><img src='https://github.com/luciamouriz/api-tmdb/blob/main/img/noepisode.png'></div>`;
+                                    carruselEpisodes.innerHTML += `<div class='episode'><div class="descripcion-episodio"><p class='title-episode'>${data.episodes[i].name}</p><p>${data.episodes[i].overview}</p></div><img src='https://luciamouriz.github.io/api-tmdb/img/noepisode.png'></div>`;
                                 }
                                 
                                
