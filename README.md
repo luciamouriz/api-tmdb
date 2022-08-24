@@ -48,8 +48,8 @@ el diseño hecho y pense que era buena idea utilizarlo para integrar en un proye
 <li><b>Diseño visual</b>: aqui es donde le añadi el color, las fuentes, imagenes y pequeños detalles.</li>
 </ul>
 <p><b>Nota:</b> Respecto a los colores, queria unos colores diferentes a las demas plataformas de streamming populares, asi que me decante por un color turquesa con degradado oscuro.<p>
-<h4>Programas que he usado en este proceso: FIGMA y PHOTOSHOP</h4>
-<img src="https://github.com/luciamouriz/api-tmdb/blob/main/img/Web_Streaming_Home.jpg" width=200>
+<h4>Programas que he usado en este proceso: Figma y Photoshop</h4>
+<img src="https://github.com/luciamouriz/api-tmdb/blob/main/img/zine_ui_web_app.png" width=400>
 <h2 id="desarrollo">Desarrollo Web</h2>
 <h3 id="tecnologias">Tecnologias usadas</h3>
 <ul>
@@ -57,6 +57,7 @@ el diseño hecho y pense que era buena idea utilizarlo para integrar en un proye
   <li>CSS</li>
   <li>Preprocesador SASS</li>
   <li>Javascript</li>
+  <li>Git</li>
 </ul>
 <h3 id="procesoweb">Como fue el proceso</h3>
 <p>El proceso al principio fue un poco complicado, nunca hice ningun proyecto usando APIs y la verdad que me han gustado bastante. 
