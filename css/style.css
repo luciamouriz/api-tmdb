@@ -360,6 +360,9 @@ footer {
   flex-direction: column;
   gap: 0.5rem;
 }
+.contenedor-seasons .contenedor-cajas-seasons #title-season {
+  font-size: calc(1em + 0.5vw);
+}
 .contenedor-seasons .contenedor-cajas-seasons .season {
   background: linear-gradient(180deg, #139ECA 0%, rgba(32, 152, 189, 0.489583) 99.99%, rgba(45, 145, 176, 0) 100%);
   font-size: 1rem;
