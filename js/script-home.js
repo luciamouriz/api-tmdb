@@ -9,9 +9,9 @@ const MOVIES = BASE_URL + "/movie/popular"+API_KEY;
 const TV = BASE_URL + "/tv/popular"+API_KEY;
 const RECOMENDATION = BASE_URL + "/trending/all/week"+API_KEY+"&page=2";
 
-const IMG_URL_S = "http://image.tmdb.org/t/p/w154";
-const IMG_URL_M = "http://image.tmdb.org/t/p/w780";
-const IMG_URL_L = "http://image.tmdb.org/t/p/w1280";
+const IMG_URL_S = "https://image.tmdb.org/t/p/w154";
+const IMG_URL_M = "https://image.tmdb.org/t/p/w780";
+const IMG_URL_L = "https://image.tmdb.org/t/p/w1280";
 
 const URLS = [POPULAR,TOP10,MOVIES,TV,RECOMENDATION];
 
