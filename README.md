@@ -1,6 +1,6 @@
 <h1>Plataforma de streaming</h1>
 <p>Proyecto personal inspirado en Netflix con el uso de la API The Movie Database.</p>
-<a href="https://luciamouriz.github.io/api-tmdb/"><img src="https://github.com/luciamouriz/api-tmdb/blob/main/img/logo.png" width=100></a>
+<a href="https://luciamouriz.github.io/zine/"><img src="https://github.com/luciamouriz/api-tmdb/blob/main/img/logo.png" width=100></a>
 
 <h2>Tabla de contenido</h2>
 
