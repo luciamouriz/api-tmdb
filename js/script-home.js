@@ -27,7 +27,6 @@ function getCarouseles(urls){
         }));
     })
     .then(data => {
-        console.log(data);
         showCarouseles(data);
     })
     .catch(error=> {

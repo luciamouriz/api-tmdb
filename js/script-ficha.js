@@ -5,9 +5,9 @@ const API_KEY = "?api_key=6c214eacc098404fa7eea530184eead5";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 
-const IMG_URL_S = "http://image.tmdb.org/t/p/w154";
-const IMG_URL_M = "http://image.tmdb.org/t/p/w780";
-const IMG_URL_L = "http://image.tmdb.org/t/p/w1280";
+const IMG_URL_S = "https://image.tmdb.org/t/p/w154";
+const IMG_URL_M = "https://image.tmdb.org/t/p/w780";
+const IMG_URL_L = "https://image.tmdb.org/t/p/w1280";
 
 //Cogemos el id y el tipo de la URL
 const urlParams = new URLSearchParams(window.location.search); 
