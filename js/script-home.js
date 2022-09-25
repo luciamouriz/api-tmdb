@@ -14,7 +14,6 @@ const IMG_URL_M = "https://image.tmdb.org/t/p/w780";
 const IMG_URL_L = "https://image.tmdb.org/t/p/w1280";
 
 const URLS = [POPULAR,TOP10,MOVIES,TV,RECOMENDATION];
-
 getCarouseles(URLS);
 
 
@@ -37,7 +36,6 @@ function getCarouseles(urls){
 
 
 function showCarouseles(data){
-
     getPortada(data)
 
     let vistos = localStorage.getItem("id")
@@ -136,8 +134,8 @@ function checkVistos(data,vistos){
     for(let j=0 ; j<data.results.length; j++){
     //Eliminamos los ids repetidos y los que estan vacios
         for(let i=0; i<vistos.length; i++){
-            if(vistos[i] === ""){vistos.splice(i,1)}
-            if(vistos[i+1] === vistos[i]){vistos.splice(i,1)}
+            if(vistos[i] === "") vistos.splice(i,1)
+            if(vistos[i+1] === vistos[i]) vistos.splice(i,1)
             if(data.results[j].id == vistos[i]){
                 document.getElementById("carousel-vistas").innerHTML += "<div class='visto'><span></span><a href='ficha.html?type="+data.results[j].media_type+"&id="+vistos[i]+"'><img src='"+IMG_URL_M+data.results[j].poster_path+"' alt='Imagen portada'></a></div>";
                 vistos.splice(i,1)
